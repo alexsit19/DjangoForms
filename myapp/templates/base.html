@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <h1>Form</h1>
+        <br>
+        <h3>сейчас часов: {{ hours }}
+        <form action="post/" method="post">
+            {% csrf_token %}
+            {{ form.text.errors }}
+            {{ form.number }}
+            <br>
+            <br>
+            <input type="submit" value="add value"/>
+            <br>
+            <br>
+            <input type="button" value="reset data in db"/>
+
+
+        </form>
+
+{% endblock %}
+</body>
+</html>
